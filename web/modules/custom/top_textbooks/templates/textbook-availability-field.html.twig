@@ -1,0 +1,20 @@
+<{#
+/**
+ * @file
+ * Top textbooks template
+ *
+ * Variables:
+ *   - textbook_count
+ *   - textbook_mindue
+ *   - textbook_sysnum
+ */
+#}
+{{ attach_library('top_textbooks/top-textbooks') }}
+<div id="texbook-{{ textbook_sysnum }}">
+  <div class="textbook-count">{{ textbook_count }} available now</div>
+  {% if textbook_count <= 0 %}
+    {%if textbook_mindue %}
+      <div class="textbook-available">Next Available: {{ textbook_mindue }}</div>
+    {% endif %}
+  {% endif %}
+</div>

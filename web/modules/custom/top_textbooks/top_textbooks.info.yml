@@ -1,0 +1,13 @@
+name: Top Textbooks
+description: A module to display textbook availablility information.
+
+package: "UMD Services"
+
+dependencies:
+  - aleph_connector
+  - easy_install
+  - views
+
+type: module
+
+core_version_requirement: ^8.9 || ^9
